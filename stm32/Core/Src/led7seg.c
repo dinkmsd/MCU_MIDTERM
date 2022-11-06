@@ -1,10 +1,3 @@
-/*
- * led7seg.c
- *
- *  Created on: Nov 4, 2022
- *      Author: Tien
- */
-
 #include "main.h"
 #include "led7seg.h"
 #include "global.h"

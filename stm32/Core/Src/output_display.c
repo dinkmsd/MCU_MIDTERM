@@ -1,9 +1,3 @@
-/*
- * output_display.c
- *
- *  Created on: Oct 25, 2022
- *      Author: TIEN
- */
 #include "main.h"
 #include "output_display.h"
 

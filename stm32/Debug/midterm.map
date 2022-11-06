@@ -569,7 +569,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x279 ./Core/Src/output_display.o
  .debug_macro   0x0000000000000000       0x69 ./Core/Src/output_display.o
  .debug_macro   0x0000000000000000      0x100 ./Core/Src/output_display.o
- .debug_line    0x0000000000000000      0x68f ./Core/Src/output_display.o
+ .debug_line    0x0000000000000000      0x68d ./Core/Src/output_display.o
  .debug_str     0x0000000000000000    0x8177e ./Core/Src/output_display.o
  .comment       0x0000000000000000       0x54 ./Core/Src/output_display.o
  .debug_frame   0x0000000000000000       0x34 ./Core/Src/output_display.o
@@ -3709,26 +3709,26 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_macro   0x0000000000017d23      0x1a2 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_macro   0x0000000000017ec5      0x1a3 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
-.debug_line     0x0000000000000000     0xe37f
+.debug_line     0x0000000000000000     0xe37d
  .debug_line    0x0000000000000000      0x665 ./Core/Src/global.o
  .debug_line    0x0000000000000665      0x965 ./Core/Src/input_processing.o
  .debug_line    0x0000000000000fca      0x77d ./Core/Src/input_reading.o
- .debug_line    0x0000000000001747      0x696 ./Core/Src/led7seg.o
- .debug_line    0x0000000000001ddd      0xa04 ./Core/Src/main.o
- .debug_line    0x00000000000027e1      0x192 ./Core/Src/software_timer.o
- .debug_line    0x0000000000002973      0x70f ./Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x0000000000003082      0x76f ./Core/Src/stm32f1xx_it.o
- .debug_line    0x00000000000037f1      0x6fb ./Core/Src/system_stm32f1xx.o
- .debug_line    0x0000000000003eec      0x6ce ./Core/Src/timer.o
- .debug_line    0x00000000000045ba       0x87 ./Core/Startup/startup_stm32f103c6ux.o
- .debug_line    0x0000000000004641      0x928 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x0000000000004f69      0xb10 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x0000000000005a79      0xd80 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
- .debug_line    0x00000000000067f9      0x9a9 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x00000000000071a2      0xd36 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
- .debug_line    0x0000000000007ed8     0x3286 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
- .debug_line    0x000000000000b15e     0x181e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
- .debug_line    0x000000000000c97c     0x1a03 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
+ .debug_line    0x0000000000001747      0x694 ./Core/Src/led7seg.o
+ .debug_line    0x0000000000001ddb      0xa04 ./Core/Src/main.o
+ .debug_line    0x00000000000027df      0x192 ./Core/Src/software_timer.o
+ .debug_line    0x0000000000002971      0x70f ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x0000000000003080      0x76f ./Core/Src/stm32f1xx_it.o
+ .debug_line    0x00000000000037ef      0x6fb ./Core/Src/system_stm32f1xx.o
+ .debug_line    0x0000000000003eea      0x6ce ./Core/Src/timer.o
+ .debug_line    0x00000000000045b8       0x87 ./Core/Startup/startup_stm32f103c6ux.o
+ .debug_line    0x000000000000463f      0x928 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000000000004f67      0xb10 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x0000000000005a77      0xd80 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o
+ .debug_line    0x00000000000067f7      0x9a9 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x00000000000071a0      0xd36 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x0000000000007ed6     0x3286 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
+ .debug_line    0x000000000000b15c     0x181e ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
+ .debug_line    0x000000000000c97a     0x1a03 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
 
 .debug_str      0x0000000000000000    0x889e1
  .debug_str     0x0000000000000000    0x811de ./Core/Src/global.o

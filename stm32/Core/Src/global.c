@@ -1,11 +1,3 @@
-/*
- * global.c
- *
- *  Created on: Oct 24, 2022
- *      Author: Tien
- */
-
-
 #include "global.h"
 #include "main.h"
 

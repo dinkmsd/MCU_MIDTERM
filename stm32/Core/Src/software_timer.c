@@ -1,10 +1,3 @@
-/*
- * software_timer.c
- *
- *  Created on: Sep 25, 2022
- *      Author: Tien
- */
-
 #include "software_timer.h"
 
 int timer1_flag = 0;

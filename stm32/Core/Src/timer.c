@@ -1,10 +1,3 @@
-/*
- * timer.c
- *
- *  Created on: Oct 24, 2022
- *      Author: Tien
- */
-
 #ifndef SRC_TIMER_C_
 #define SRC_TIMER_C_
 

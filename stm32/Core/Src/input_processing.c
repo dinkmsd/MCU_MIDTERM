@@ -1,9 +1,3 @@
-/*
- * input_processing.c
- *
- *  Created on: Oct 24, 2022
- *      Author: TIEN
- */
 #include "input_reading.h"
 #include "input_processing.h"
 #include "stdio.h"
