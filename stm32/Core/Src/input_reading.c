@@ -30,7 +30,7 @@ static GPIO_PinState buttonBuffer[N0_OF_BUTTONS];
 // we define two buffers for debouncing
 static GPIO_PinState debounceButtonBuffer1[N0_OF_BUTTONS];
 static GPIO_PinState debounceButtonBuffer2[N0_OF_BUTTONS];
-// we define a flag for a button pressed more than 1 second .
+// we define a flag for a button pressed more than 3 second .
 static uint8_t flagForButtonPress3s[N0_OF_BUTTONS];
 // we define counter for automatically increasing the value
 // after the button is pressed more than 1 second .
@@ -78,13 +78,13 @@ unsigned char is_button_pressed(uint8_t index) {
 	return (buttonBuffer[index] == BUTTON_IS_PRESSED);
 }
 
-// Check for button is pressed more than a second or not
+// Check for button is pressed more than 3 second or not
 unsigned char is_button_pressed_3s (unsigned char index ) {
 	if(index >= N0_OF_BUTTONS ) return 0xff ;
 	return (flagForButtonPress3s[index] == 1) ;
 }
 
-unsigned char is_button_pressed_1s_while_holding(unsigned char index) {
+unsigned char pressed_a_second_while_holding(unsigned char index) {
 	if(index >= N0_OF_BUTTONS) return 0xff ;
 	return (flagForButtonPress1sWhileHolding[index] == 1) ;
 }
