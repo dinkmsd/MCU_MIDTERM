@@ -10,6 +10,10 @@ int timer2_counter = 0;
 int timer3_counter = 0;
 int timer4_counter = 0;
 int timer5_counter = 0;
+int timer10s_flag = 0;
+int timer1s_flag = 0;
+int timer10s_counter = 0;
+int timer1s_counter = 0;
 
 int TIMER_CYCLE = 10; // 10ms
 void setTimer1(int duration) {
@@ -32,6 +36,16 @@ void setTimer4(int duration) {
 void setTimer5(int duration) {
 	timer5_counter = duration / TIMER_CYCLE;
 	timer5_flag = 0;
+}
+
+void setTimer10s(int duration) {
+	timer10s_counter = duration / TIMER_CYCLE;
+	timer10s_flag = 0;
+}
+
+void setTimer1s(int duration) {
+	timer1s_counter = duration / TIMER_CYCLE;
+	timer1s_flag = 0;
 }
 
 void timerRun() {
@@ -65,6 +79,21 @@ void timerRun() {
 			timer5_flag = 1;
 		}
 	}
+
+	if (timer10s_counter > 0) {
+		timer10s_counter--;
+		if (timer10s_counter <= 0) {
+			timer10s_flag = 1;
+		}
+	}
+
+	if (timer1s_counter > 0) {
+		timer1s_counter--;
+		if (timer1s_counter <= 0) {
+			timer1s_flag = 1;
+		}
+	}
+
 }
 
 void clearTimer1() {
@@ -75,4 +104,14 @@ void clearTimer1() {
 void clearTimer2() {
 	timer2_counter = 0;
 	timer2_flag = 0;
+}
+
+void clearTimer10s() {
+	timer10s_counter = 0;
+	timer10s_flag = 0;
+}
+
+void clearTimer1s() {
+	timer1s_counter = 0;
+	timer1s_flag = 0;
 }
