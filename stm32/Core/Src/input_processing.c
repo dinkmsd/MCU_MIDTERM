@@ -48,6 +48,7 @@ void fsm_button_normal() {
 }
 
 void fsm_button_3s() {
+	int x = 0;
 	int button_pressed_3s = WhichButtonIsPressed3s();
 	switch (button_pressed_3s) {
 	case INC_PRESSED_3S:
