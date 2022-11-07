@@ -100,6 +100,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (&htim2);
+  setTimer1(DURATION_1S_GLOBAL);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -110,6 +112,10 @@ int main(void)
 	/* USER CODE END WHILE */
 
 	/* USER CODE BEGIN 3 */
+	  if (timer1_flag == 1) {
+	  		HAL_GPIO_TogglePin(GPIOA, LED_RED_Pin);
+	  		setTimer1(DURATION_1S_GLOBAL);
+	  	}
 	fsm_simple_button_run();
   }
   /* USER CODE END 3 */
