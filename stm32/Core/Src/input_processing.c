@@ -69,11 +69,22 @@ void fsm_simple_button_run() {
 		if (WhichButtonIsPressed()) {
 			state = BUTTON_PRESSED;
 			fsm_button_normal();
+			clearTimer10s();
+			clearTimer1s();
+		}
+		if (timer10s_flag == 1) {
+			clearTimer10s();
+			setTimer1s(DURATION_1S_GLOBAL);
+		}
+		if (timer1s_flag == 1) {
+			if (counter > 0) display7SEG(--counter);
+			setTimer1s(DURATION_1S_GLOBAL);
 		}
 		break;
 	case BUTTON_PRESSED:
 		if (!WhichButtonIsPressed()) {
 			state = BUTTON_RELEASED;
+			setTimer10s(DURATION_GLOBAL_AUTO);
 		} else {
 			for (int i = 0; i < N0_OF_BUTTONS - 1; i++) {
 				if (is_button_pressed_3s(i))
@@ -84,6 +95,7 @@ void fsm_simple_button_run() {
 	case BUTTON_PRESSED_MORE_THAN_3S:
 		if (!WhichButtonIsPressed()) {
 			state = BUTTON_RELEASED;
+			setTimer10s(DURATION_GLOBAL_AUTO);
 		}
 		for (int i = 0; i < N0_OF_BUTTONS; i++) {
 			if (flagButton1s[i] == 1) {
