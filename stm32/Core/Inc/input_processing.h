@@ -1,10 +1,3 @@
-/*
- * input_processing.h
- *
- *  Created on: Oct 24, 2022
- *      Author: Tien
- */
-
 #ifndef INC_INPUT_PROCESSING_H_
 #define INC_INPUT_PROCESSING_H_
 

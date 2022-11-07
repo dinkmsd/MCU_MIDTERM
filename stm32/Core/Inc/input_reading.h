@@ -1,14 +1,7 @@
-/*
- * input_reading.h
- *
- *  Created on: Oct 25, 2022
- *      Author: Tien
- */
-
 #ifndef INC_INPUT_READING_H_
 #define INC_INPUT_READING_H_
 #include "main.h"
-// we aim to work with more than one buttons
+
 #define N0_OF_BUTTONS 3
 
 void button_reading(void);

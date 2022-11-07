@@ -27,7 +27,7 @@ int WhichButtonIsPressed3s() {
 
 	return 0; // None of these buttons are pressed
 }
-void fsm_button_1s() {
+void fsm_button_normal() {
 	int button_pressed = WhichButtonIsPressed();
 	switch (button_pressed) {
 	case INC_PRESSED:
@@ -68,30 +68,39 @@ void fsm_simple_button_run() {
 	case BUTTON_RELEASED:
 		if (WhichButtonIsPressed()) {
 			state = BUTTON_PRESSED;
-			fsm_button_1s();
+			fsm_button_normal();
+			clearTimer10s();
+			clearTimer1s();
 		}
+		if (timer10s_flag == 1) {
+			clearTimer10s();
+			setTimer1s(DURATION_1S_GLOBAL);
+		}
+		if (timer1s_flag == 1) {
+			if (counter > 0) display7SEG(--counter);
+			setTimer1s(DURATION_1S_GLOBAL);
+		}
+		break;
 	case BUTTON_PRESSED:
 		if (!WhichButtonIsPressed()) {
 			state = BUTTON_RELEASED;
+			setTimer10s(DURATION_GLOBAL_AUTO);
 		} else {
 			for (int i = 0; i < N0_OF_BUTTONS - 1; i++) {
-				flagForFirstButtonIsReleased = 1;
 				if (is_button_pressed_3s(i))
 					state = BUTTON_PRESSED_MORE_THAN_3S;
 			}
 		}
+		break;
 	case BUTTON_PRESSED_MORE_THAN_3S:
 		if (!WhichButtonIsPressed()) {
 			state = BUTTON_RELEASED;
+			setTimer10s(DURATION_GLOBAL_AUTO);
 		}
-
-		AllowToExecuteAfterASecondPressed = 1; // Allow the system to count for pressed button each half a second
-
 		for (int i = 0; i < N0_OF_BUTTONS; i++) {
-			if (pressed_a_second_while_holding(i)) {
+			if (flagButton1s[i] == 1) {
 				fsm_button_3s();
-				flagForButtonPress1sWhileHolding[i] = 0;
-				flagForFirstButtonIsReleased = 1;
+				flagButton1s[i] = 0;
 			}
 		}
 		break;

@@ -1,9 +1,3 @@
-/*
- * software_timer.h
- *
- *  Created on: Sep 25, 2022
- *      Author: nguye
- */
 
 #ifndef INC_SOFTWARE_TIMER_H_
 #define INC_SOFTWARE_TIMER_H_
@@ -16,6 +10,9 @@ extern int timer3_flag;
 extern int timer4_flag;
 extern int timer5_flag;
 extern int TIMER_CYCLE;
+extern int timer10s_flag;
+extern int timer1s_flag;
+
 
 extern int timer0_mode_debounce_flag;
 extern int timer0_mode_debounce_counter;
@@ -26,8 +23,14 @@ void setTimer2(int duration);
 void setTimer3(int duration);
 void setTimer4(int duration);
 void setTimer5(int duration);
+void setTimer10s(int duration);
+void setTimer1s(int duration);
+
 void timerRun();
 void clearTimer1();
 void clearTimer2();
+void clearTimer10s();
+void clearTimer1s();
+
 
 #endif /* INC_SOFTWARE_TIMER_H_ */
