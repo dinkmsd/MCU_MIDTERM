@@ -2,4 +2,4 @@ input_processing.c:16:5:WhichButtonIsPressed	8	static
 input_processing.c:24:5:WhichButtonIsPressed3s	8	static
 input_processing.c:30:6:fsm_button_normal	16	static
 input_processing.c:50:6:fsm_button_3s	16	static
-input_processing.c:67:6:fsm_simple_button_run	16	static
+input_processing.c:66:6:fsm_simple_button_run	16	static
